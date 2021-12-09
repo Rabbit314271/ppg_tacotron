@@ -19,7 +19,7 @@ class PreNet(Module):
     def forward(self, inputs):
         # inputs : (N, L_in, in_dims)
         # fc1_outputs : (N, L_in, out_dims_1)
-        fc1_outputs = self.fc1(inputs.double())
+        fc1_outputs = self.fc1(inputs)
         relu1_outputs = self.relu(fc1_outputs)
         layer_1_outputs = self.drop(relu1_outputs)
 
